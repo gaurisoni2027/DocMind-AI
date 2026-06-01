@@ -1,0 +1,49 @@
+# Core LangChain
+langchain
+langchain-core
+langchain-community
+
+# OpenAI
+langchain-openai
+openai
+
+# Mistral AI
+langchain-mistralai
+mistralai
+
+# Vector Database
+chromadb
+
+# Embeddings & Tokenization
+tiktoken
+
+# Document Loaders
+pypdf
+unstructured
+python-docx
+
+# Environment Variables
+python-dotenv
+
+# API Server (optional)
+fastapi
+uvicorn
+
+# UI (optional)
+streamlit
+
+# Data Validation
+pydantic
+
+# Utilities
+numpy
+pandas
+
+# RAG Text Splitting
+sentence-transformers
+
+# Retrieval & Search
+rank-bm25
+
+# HTTP Requests
+requests

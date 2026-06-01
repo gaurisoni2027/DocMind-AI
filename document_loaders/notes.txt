@@ -1,0 +1,470 @@
+MACHINE LEARNING AND GENERATIVE AI NOTES
+
+========================================
+1. VARIANCE VS COVARIANCE
+========================================
+
+Variance is a statistical measure that describes how much a set of values differs from its average value. It helps determine the spread or dispersion of data points. A low variance means data points are close to the mean, while a high variance means they are spread out.
+
+Mathematically:
+
+Variance(X) = E[(X - μ)²]
+
+where μ is the mean of X.
+
+Covariance measures the relationship between two variables. It tells us whether the variables move together or in opposite directions.
+
+Covariance(X,Y) = E[(X-μx)(Y-μy)]
+
+Positive covariance indicates both variables increase together. Negative covariance indicates one increases while the other decreases.
+
+Key Differences:
+- Variance measures variability of one variable.
+- Covariance measures joint variability of two variables.
+- Variance is always non-negative.
+- Covariance can be positive, negative, or zero.
+
+Applications:
+- Risk analysis
+- Feature analysis
+- Statistical modeling
+- Data science
+
+========================================
+2. CORRELATION
+========================================
+
+Correlation measures the strength and direction of a relationship between two variables. Unlike covariance, it is standardized and ranges from -1 to +1.
+
+Correlation Formula:
+
+ρ = Cov(X,Y)/(σxσy)
+
+Types of Correlation:
+
+1. Positive Correlation
+As one variable increases, the other also increases.
+
+2. Negative Correlation
+As one variable increases, the other decreases.
+
+3. Zero Correlation
+No linear relationship exists.
+
+Advantages:
+- Easy interpretation
+- Scale independent
+- Useful in feature selection
+
+Applications:
+- Stock market analysis
+- Machine learning
+- Data mining
+- Recommendation systems
+
+========================================
+3. LINEAR REGRESSION
+========================================
+
+Linear Regression is a supervised machine learning algorithm used for predicting continuous values.
+
+The model assumes a linear relationship between input features and output.
+
+Equation:
+
+y = mx + b
+
+where:
+y = target variable
+m = slope
+x = input feature
+b = intercept
+
+Multiple Linear Regression:
+
+y = b0 + b1x1 + b2x2 + ... + bnxn
+
+Assumptions:
+- Linear relationship
+- Independence of observations
+- Constant variance
+- Normal distribution of residuals
+
+Applications:
+- House price prediction
+- Sales forecasting
+- Demand prediction
+- Weather forecasting
+
+Advantages:
+- Simple
+- Interpretable
+- Fast to train
+
+Limitations:
+- Cannot model complex nonlinear relationships.
+
+========================================
+4. LOGISTIC REGRESSION
+========================================
+
+Logistic Regression is used for classification problems.
+
+Instead of predicting continuous values, it predicts probabilities.
+
+Sigmoid Function:
+
+P(y=1) = 1/(1+e^-z)
+
+Output ranges between 0 and 1.
+
+Types:
+- Binary Logistic Regression
+- Multinomial Logistic Regression
+- Ordinal Logistic Regression
+
+Applications:
+- Spam detection
+- Disease prediction
+- Fraud detection
+- Customer churn prediction
+
+Advantages:
+- Easy to implement
+- Interpretable
+- Efficient
+
+========================================
+5. OVERFITTING AND UNDERFITTING
+========================================
+
+Overfitting occurs when a model learns noise from training data instead of actual patterns.
+
+Characteristics:
+- High training accuracy
+- Low testing accuracy
+
+Causes:
+- Complex models
+- Small datasets
+- Too many features
+
+Solutions:
+- Regularization
+- More training data
+- Cross-validation
+- Pruning
+
+Underfitting occurs when a model is too simple to learn underlying patterns.
+
+Characteristics:
+- Low training accuracy
+- Low testing accuracy
+
+Solutions:
+- Increase model complexity
+- Add features
+- Train longer
+
+========================================
+6. BIAS-VARIANCE TRADEOFF
+========================================
+
+Bias is error due to overly simplistic assumptions.
+
+Variance is error due to sensitivity to training data.
+
+High Bias:
+- Underfitting
+
+High Variance:
+- Overfitting
+
+Goal:
+Find an optimal balance between bias and variance to improve generalization.
+
+Examples:
+- Linear Regression may have high bias.
+- Deep Neural Networks may have high variance.
+
+========================================
+7. DECISION TREES
+========================================
+
+Decision Trees are supervised learning algorithms used for classification and regression.
+
+Structure:
+- Root Node
+- Internal Nodes
+- Leaf Nodes
+
+Splitting Criteria:
+- Gini Index
+- Entropy
+- Information Gain
+
+Advantages:
+- Easy to visualize
+- Handles nonlinear relationships
+- Requires little preprocessing
+
+Disadvantages:
+- Overfitting
+- Sensitive to small changes
+
+Applications:
+- Credit scoring
+- Medical diagnosis
+- Customer segmentation
+
+========================================
+8. RANDOM FOREST
+========================================
+
+Random Forest is an ensemble learning method that combines multiple decision trees.
+
+Working:
+1. Create multiple bootstrapped datasets.
+2. Train a decision tree on each dataset.
+3. Aggregate results.
+
+Advantages:
+- High accuracy
+- Robust to overfitting
+- Handles large datasets
+
+Disadvantages:
+- Less interpretable
+- Higher computational cost
+
+Applications:
+- Fraud detection
+- Recommendation systems
+- Medical diagnosis
+
+========================================
+9. K-MEANS CLUSTERING
+========================================
+
+K-Means is an unsupervised learning algorithm used for clustering.
+
+Steps:
+1. Choose K clusters.
+2. Initialize centroids.
+3. Assign points to nearest centroid.
+4. Update centroids.
+5. Repeat until convergence.
+
+Advantages:
+- Simple
+- Fast
+- Scalable
+
+Limitations:
+- Sensitive to initialization
+- Requires predefined K
+
+Applications:
+- Customer segmentation
+- Image compression
+- Market analysis
+
+========================================
+10. PRINCIPAL COMPONENT ANALYSIS (PCA)
+========================================
+
+PCA is a dimensionality reduction technique.
+
+Purpose:
+Reduce features while preserving maximum variance.
+
+Steps:
+1. Standardize data.
+2. Compute covariance matrix.
+3. Find eigenvalues and eigenvectors.
+4. Select principal components.
+
+Benefits:
+- Reduces complexity
+- Improves visualization
+- Speeds up training
+
+Applications:
+- Face recognition
+- Data compression
+- Feature extraction
+
+========================================
+11. NEURAL NETWORKS
+========================================
+
+Neural Networks are computational models inspired by the human brain.
+
+Components:
+- Input Layer
+- Hidden Layers
+- Output Layer
+
+Neuron Operation:
+
+Output = Activation(Weighted Sum + Bias)
+
+Common Activation Functions:
+- ReLU
+- Sigmoid
+- Tanh
+- Softmax
+
+Training Process:
+1. Forward Propagation
+2. Loss Calculation
+3. Backpropagation
+4. Weight Update
+
+Applications:
+- Image recognition
+- NLP
+- Speech recognition
+- Recommendation systems
+
+========================================
+12. GENERATIVE AI
+========================================
+
+Generative AI creates new content such as text, images, audio, and videos.
+
+Popular Models:
+- GPT
+- Gemini
+- Claude
+- Mistral
+- LLaMA
+
+Techniques:
+- Transformers
+- Diffusion Models
+- GANs
+
+Applications:
+- Content creation
+- Coding assistants
+- Chatbots
+- Image generation
+
+Advantages:
+- Automation
+- Creativity enhancement
+- Personalized experiences
+
+Challenges:
+- Hallucinations
+- Bias
+- Ethical concerns
+
+========================================
+13. RAG ARCHITECTURE
+========================================
+
+Retrieval-Augmented Generation (RAG) combines retrieval systems with large language models.
+
+Workflow:
+
+User Query
+     ↓
+Embedding Model
+     ↓
+Vector Database
+     ↓
+Retrieve Relevant Chunks
+     ↓
+LLM Generation
+     ↓
+Final Answer
+
+Benefits:
+- Reduces hallucination
+- Uses private knowledge
+- Provides updated information
+
+Components:
+- Document Loader
+- Text Splitter
+- Embedding Model
+- Vector Database
+- Retriever
+- LLM
+
+Popular Frameworks:
+- LangChain
+- LlamaIndex
+- Haystack
+
+========================================
+14. VECTOR DATABASES
+========================================
+
+Vector Databases store embeddings and perform similarity search.
+
+Popular Vector Databases:
+- ChromaDB
+- Pinecone
+- Weaviate
+- FAISS
+- Milvus
+
+Key Concepts:
+- Embeddings
+- Similarity Search
+- Nearest Neighbor Search
+
+Distance Metrics:
+- Cosine Similarity
+- Euclidean Distance
+- Dot Product
+
+Applications:
+- Semantic Search
+- Recommendation Systems
+- RAG Applications
+
+========================================
+15. EMBEDDINGS
+========================================
+
+Embeddings are numerical vector representations of text, images, or other data.
+
+Purpose:
+Convert unstructured data into machine-readable vectors.
+
+Example:
+
+"Dog" → [0.12, -0.44, 0.91, ...]
+
+Words with similar meanings have similar vectors.
+
+Popular Embedding Models:
+- OpenAI Embeddings
+- Mistral Embeddings
+- Sentence Transformers
+- BGE Models
+- E5 Models
+
+Applications:
+- Semantic Search
+- Document Retrieval
+- Recommendation Systems
+- RAG
+
+Benefits:
+- Captures semantic meaning
+- Enables similarity search
+- Improves retrieval quality
+
+Challenges:
+- Storage requirements
+- Computational cost
+- Model selection
+
+========================================
+END OF NOTES
+========================================
