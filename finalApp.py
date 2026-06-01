@@ -25,8 +25,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
 load_dotenv()
+
+try:
+    api_key = st.secrets["MISTRAL_API_KEY"]
+except Exception:
+    api_key = os.getenv("MISTRAL_API_KEY")
 
 st.markdown("""
 <style>
@@ -108,12 +112,6 @@ def load_embeddings():
 
 @st.cache_resource
 def load_llm():
-
-    api_key = st.secrets.get(
-        "MISTRAL_API_KEY",
-        os.getenv("MISTRAL_API_KEY")
-    )
-
     return ChatMistralAI(
         model="mistral-small-2603",
         temperature=0.2,
