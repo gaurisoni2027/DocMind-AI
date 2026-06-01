@@ -17,20 +17,19 @@ from langchain_chroma import Chroma
 from langchain_mistralai import ChatMistralAI
 
 from langchain_core.prompts import ChatPromptTemplate
-api_key = st.secrets.get("MISTRAL_API_KEY", os.getenv("MISTRAL_API_KEY"))
 
-st.set_page_config(
-    page_title="DocMind AI",
-    page_icon="📚",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 load_dotenv()
 
 try:
     api_key = st.secrets["MISTRAL_API_KEY"]
 except Exception:
     api_key = os.getenv("MISTRAL_API_KEY")
+st.set_page_config(
+    page_title="DocMind AI",
+    page_icon="📚",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 st.markdown("""
 <style>
