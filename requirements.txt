@@ -1,49 +1,52 @@
-# Core LangChain
 langchain
 langchain-core
 langchain-community
 
-# OpenAI
-langchain-openai
-openai
+# LLM Providers
 
-# Mistral AI
+langchain-openai
 langchain-mistralai
+openai
 mistralai
 
 # Vector Database
+
 chromadb
 
-# Embeddings & Tokenization
-tiktoken
+# Embedding Models
 
-# Document Loaders
+sentence-transformers
+
+# Document Loaders dependencies
+
 pypdf
 unstructured
-python-docx
+beautifulsoup4
+lxml
+
+# Text Processing
+
+tiktoken
 
 # Environment Variables
+
 python-dotenv
 
-# API Server (optional)
+# Data Handling
+
+pandas
+numpy
+
+# API / App Layer (optional but common in RAG apps)
+
 fastapi
 uvicorn
 
 # UI (optional)
+
 streamlit
 
-# Data Validation
-pydantic
-
 # Utilities
-numpy
-pandas
 
-# RAG Text Splitting
-sentence-transformers
-
-# Retrieval & Search
-rank-bm25
-
-# HTTP Requests
+tqdm
 requests
