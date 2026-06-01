@@ -17,6 +17,7 @@ from langchain_chroma import Chroma
 from langchain_mistralai import ChatMistralAI
 
 from langchain_core.prompts import ChatPromptTemplate
+api_key = st.secrets.get("MISTRAL_API_KEY", os.getenv("MISTRAL_API_KEY"))
 
 st.set_page_config(
     page_title="DocMind AI",
@@ -108,9 +109,15 @@ def load_embeddings():
 @st.cache_resource
 def load_llm():
 
+    api_key = st.secrets.get(
+        "MISTRAL_API_KEY",
+        os.getenv("MISTRAL_API_KEY")
+    )
+
     return ChatMistralAI(
         model="mistral-small-2603",
-        temperature=0.2
+        temperature=0.2,
+        api_key=api_key
     )
 def build_vector_store(chunks):
 
